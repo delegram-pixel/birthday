@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #2a1a40 0%, #1a0b2e 100%);
+  min-height: 100vh;
+}
+
+.magical-gradient {
+  background: linear-gradient(135deg, #2a1a40 0%, #7b68ee 50%, #bfa2db 100%);
+}
+
+.parchment-texture {
+  background: linear-gradient(45deg, #ffffff 0%, #f8eaf3 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #ffd700;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffd700;
+  }
+}
+
+.star {
+  position: absolute;
+  background: #ffd700;
+  border-radius: 50%;
+  animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.floating-candle {
+  animation: float 6s ease-in-out infinite;
+}
+
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+/* Ensure content is visible by default */
+* {
+  box-sizing: border-box;
+}
+
+/* Make sure text is visible */
+body,
+html {
+  color: white;
+}
+
+.text-readable {
+  color: #1a202c;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bg-readable {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
